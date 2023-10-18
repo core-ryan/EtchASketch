@@ -1,0 +1,21 @@
+div{
+    
+}
+
+#grid-container{
+    /* Set to flex so columns are laid out left to right */
+    display: flex;
+}
+
+button{
+    margin: 20px;
+}
+
+.cell{
+    /* 16 x 16 cells: makes grid 1200px x 1200px */
+    width: 75px;
+    height: 75px;
+    border: 1px solid black;
+    margin: 0px;
+    
+}
