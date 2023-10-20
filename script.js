@@ -34,17 +34,19 @@ function clearGrid(){
 function createGridWithInput(numOfSquares){
     // Will be called when user presses "New Sketch Pad" button and provides input.
     
+    // Loop an amount of times determined by user
     for(let i = 0; i < numOfSquares; i++){
         // Create new column div to hold cells. Add "column" class
         let columnDiv = document.createElement("div");
         columnDiv.classList.add("column");
 
+        // Loop an amount of times determined by user
         for(let j = 0; j < numOfSquares; j++){
             // Create new cell. Add "cell" class
             let newDiv = document.createElement("div");
             newDiv.classList.add("cell");
 
-            // NEED TO OVERWRITE CELL SIZE
+            // Overwrites width and height of cell class to fit user's selected amount of cells in original grid space
             let x = 1200/numOfSquares + "px";
             newDiv.style.width = x;
             newDiv.style.height = x;
