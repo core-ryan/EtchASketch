@@ -68,9 +68,28 @@ function createGridWithInput(numOfSquares){
 
 createGrid();
 
+
+// Event listener that triggers when New Sketch Pad button is pressed
 let sketchButton = document.getElementById("sketch-button");
 sketchButton.addEventListener("click", function(){
+
+    // Bool to establish prompt loop in cases of invalid input
+    let isValidInput = false;
+
     let userResponse = prompt("How many squares per side?");
+
+    while(isValidInput == false){
+        isValidInput = true;
+        userResponse = prompt("How many squares per side?");
+
+        // Checks if the input given is not a number
+        if(isNaN(userResponse)){
+            // input is not a number, trigger loop again to reprompt
+            isValidInput = false;
+        }
+    }
+
+    
     console.log(1200 / userResponse);
     clearGrid();
     createGridWithInput(userResponse);
